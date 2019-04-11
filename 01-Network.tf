@@ -17,3 +17,5 @@ resource "aws_subnet" "ec2" {
     Name = "EC2"
   }
 }
+
+# Hallo
