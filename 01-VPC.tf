@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "gw" {
 resource "aws_subnet" "external" {
   vpc_id     = "${aws_vpc.test.id}"
   cidr_block = "10.0.0.0/24"
-
+  map_public_ip_on_launch = true
   tags = {
     Name = "External Subnet"
   }
@@ -36,7 +36,6 @@ resource "aws_subnet" "internal" {
 
 resource "aws_route_table" "external" {
   vpc_id = "${aws_vpc.test.id}"
-
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.gw.id}"
