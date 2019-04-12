@@ -14,19 +14,40 @@ resource "aws_internet_gateway" "gw" {
 
 ### Subnets
 
-resource "aws_subnet" "external" {
+resource "aws_subnet" "external1" {
   vpc_id     = "${aws_vpc.test.id}"
+  availability_zone = "eu-west-2a"
   cidr_block = "10.0.0.0/24"
-
+  map_public_ip_on_launch = true
   tags = {
-    Name = "External Subnet"
+    Name = "External Subnet 1"
   }
 }
 
-resource "aws_subnet" "internal" {
+resource "aws_subnet" "external2" {
   vpc_id     = "${aws_vpc.test.id}"
-  cidr_block = "10.0.1.0/24"
 
+  availability_zone = "eu-west-2b"
+  cidr_block = "10.0.1.0/24"
+  map_public_ip_on_launch = true
+  tags = {
+    Name = "External Subnet 2"
+  }
+}
+
+resource "aws_subnet" "internal1" {
+  vpc_id     = "${aws_vpc.test.id}"
+  availability_zone = "eu-west-2a"
+  cidr_block = "10.0.2.0/24"
+  tags = {
+    Name = "Internal Subnet"
+  }
+}
+
+resource "aws_subnet" "internal2" {
+  vpc_id     = "${aws_vpc.test.id}"
+  availability_zone = "eu-west-2b"
+  cidr_block = "10.0.3.0/24"
   tags = {
     Name = "Internal Subnet"
   }
@@ -36,7 +57,6 @@ resource "aws_subnet" "internal" {
 
 resource "aws_route_table" "external" {
   vpc_id = "${aws_vpc.test.id}"
-
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = "${aws_internet_gateway.gw.id}"
