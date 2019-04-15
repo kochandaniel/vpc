@@ -1,7 +1,7 @@
 ### VPC Main
 
 resource "aws_vpc" "test" {
-  cidr_block = "10.0.0.0/16"
+  cidr_iblock = "172.31.1.0/16"
 }
 
 resource "aws_internet_gateway" "gw" {
@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "gw" {
 resource "aws_subnet" "external1" {
   vpc_id     = "${aws_vpc.test.id}"
   availability_zone = "eu-west-2a"
-  cidr_block = "10.0.0.0/24"
+  cidr_block = "172.31.1.0/24"
   map_public_ip_on_launch = true
   tags = {
     Name = "External Subnet 1"
