@@ -1,7 +1,7 @@
 ### VPC Main !!!
 
 resource "aws_vpc" "test" {
-  cidr_block = "172.31.1.0/16"
+  cidr_block = "172.31.0.0/16"
 }
 
 resource "aws_internet_gateway" "gw" {
