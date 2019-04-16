@@ -76,6 +76,28 @@ resource "aws_route_table" "internal" {
   }
 }
 
+## Subnet Association to Route Tables
+
+resource "aws_route_table_association" "external1" {
+  subnet_id      = "${aws_subnet.external1}"
+  route_table_id = "${aws_route_table.external.id}"
+}
+
+resource "aws_route_table_association" "external2" {
+  subnet_id      = "${aws_subnet.external2.id}"
+  route_table_id = "${aws_route_table.external.id}"
+}
+
+resource "aws_route_table_association" "internal1" {
+  subnet_id      = "${aws_subnet.internal1.id}"
+  route_table_id = "${aws_route_table.internal.id}"
+}
+
+resource "aws_route_table_association" "internal2" {
+  subnet_id      = "${aws_subnet.internal2.id}"
+  route_table_id = "${aws_route_table.internal.id}"
+}
+
 ## Security Groups
 
 resource "aws_security_group" "ssh" {
