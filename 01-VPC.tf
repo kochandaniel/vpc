@@ -1,4 +1,4 @@
-### VPC Main !!!
+### VPC Main
 
 resource "aws_vpc" "test" {
   cidr_block = "172.31.0.0/16"
