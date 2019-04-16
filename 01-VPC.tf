@@ -16,7 +16,7 @@ resource "aws_internet_gateway" "gw" {
 
 resource "aws_subnet" "external1" {
   vpc_id     = "${aws_vpc.test.id}"
-  availability_zone = "eu-west-2a"
+  availability_zone = "eu-north-1"
   cidr_block = "172.31.1.0/24"
   map_public_ip_on_launch = true
   tags = {
@@ -27,8 +27,8 @@ resource "aws_subnet" "external1" {
 resource "aws_subnet" "external2" {
   vpc_id     = "${aws_vpc.test.id}"
 
-  availability_zone = "eu-west-2b"
-  cidr_block = "10.0.1.0/24"
+  availability_zone = "eu-north-1"
+  cidr_block = "172.31.1.1/24"
   map_public_ip_on_launch = true
   tags = {
     Name = "External Subnet 2"
@@ -37,8 +37,8 @@ resource "aws_subnet" "external2" {
 
 resource "aws_subnet" "internal1" {
   vpc_id     = "${aws_vpc.test.id}"
-  availability_zone = "eu-west-2a"
-  cidr_block = "10.0.2.0/24"
+  availability_zone = "eu-north-1"
+  cidr_block = "172.31.1.2/24"
   tags = {
     Name = "Internal Subnet"
   }
@@ -46,8 +46,8 @@ resource "aws_subnet" "internal1" {
 
 resource "aws_subnet" "internal2" {
   vpc_id     = "${aws_vpc.test.id}"
-  availability_zone = "eu-west-2b"
-  cidr_block = "10.0.3.0/24"
+  availability_zone = "eu-north-1"
+  cidr_block = "172.31.1.3/24"
   tags = {
     Name = "Internal Subnet"
   }
