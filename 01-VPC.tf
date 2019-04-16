@@ -79,7 +79,7 @@ resource "aws_route_table" "internal" {
 ## Subnet Association to Route Tables
 
 resource "aws_route_table_association" "external1" {
-  subnet_id      = "${aws_subnet.external1}"
+  subnet_id      = "${aws_subnet.external1.id}"
   route_table_id = "${aws_route_table.external.id}"
 }
 
