@@ -65,7 +65,6 @@ resource "aws_route_table" "external" {
   tags = {
     Name = "External"
   }
-  subnet_id = "${aws_subnet.external1.id}"
 }
 
 resource "aws_route_table" "internal" {
