@@ -40,7 +40,7 @@ resource "aws_subnet" "internal1" {
   availability_zone = "eu-north-1a"
   cidr_block = "172.31.3.0/24"
   tags = {
-    Name = "Internal Subnet"
+    Name = "Internal Subnet 1"
   }
 }
 
@@ -49,7 +49,7 @@ resource "aws_subnet" "internal2" {
   availability_zone = "eu-north-1b"
   cidr_block = "172.31.4.0/24"
   tags = {
-    Name = "Internal Subnet"
+    Name = "Internal Subnet 2"
   }
 }
 
@@ -111,7 +111,7 @@ resource "aws_security_group" "ssh" {
     from_port = 22
     to_port = 22
     protocol = "TCP"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["10.0.0.0/8"]
   }
 
   egress {
