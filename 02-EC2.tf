@@ -6,8 +6,18 @@ resource "aws_instance" "external" {
   instance_type = "t3.micro"
   subnet_id = "${aws_subnet.external1.id}"
   key_name = "Dank"
-  vpc_security_group_ids = ["${aws_security_group.ssh.id}"]
-  tags = {dynamic}
+  vpc_security_group_ids = [
+    "${aws_security_group.ssh.id}"]
+
+  dynamic "tag" {
+    for_each = local.ec2_tags
+
+    content {
+      key = tag.key
+      value = tag.value
+      propagate_at_launch = true
+    }
+  }
 }
 
 resource "aws_instance" "internal" {
@@ -16,17 +26,26 @@ resource "aws_instance" "internal" {
   subnet_id = "${aws_subnet.internal1.id}"
   key_name = "Dank"
   vpc_security_group_ids = ["${aws_security_group.ssh.id}"]
-  tags = {dynamic}
+
+  dynamic "tag" {
+    for_each = local.ec2_tags
+
+    content {
+      key                 = tag.key
+      value               = tag.value
+      propagate_at_launch = true
+    }
+  }
 }
 
 locals {
   ec2_tags = {
-    Name          = "rancher-server"
+    Name          = "vpc_stockholm"
     KeepUntil     = "Indef"
-    CostCenter    = "100.9106"
-    ManagedBy     = "dsanchez@illumina.com"
-    Owner         = "dsanchez"
-    Purpose       = "Rancher Server"
-    ResourceGroup = "rancher"
+    CostCenter    = ""
+    ManagedBy     = "dkochan@illumina.com"
+    Owner         = "dkochan"
+    Purpose       = "test"
+    ResourceGroup = ""
   }
 }
