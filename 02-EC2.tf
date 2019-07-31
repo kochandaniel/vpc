@@ -20,6 +20,8 @@ resource "aws_instance" "external" {
   }
 }
 
+//dynamic blocks
+
 resource "aws_instance" "internal" {
   ami = "ami-95b53beb"
   instance_type = "t3.micro"
