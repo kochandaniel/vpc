@@ -6,17 +6,10 @@ resource "aws_instance" "external" {
   instance_type = "t3.micro"
   subnet_id = "${aws_subnet.external1.id}"
   key_name = "Dank"
-  vpc_security_group_ids = ["${aws_security_group.ssh.id}"]
+  vpc_security_group_ids = [
+    "${aws_security_group.ssh.id}"]
 
-  dynamic "tag" {
-    for_each = local.ec2_tags
-
-    content {
-      key = tag.key
-      value = tag.value
-      propagate_at_launch = true
-    }
-  }
+  tags = local.ec2_tags
 }
 
 resource "aws_instance" "internal" {
@@ -26,15 +19,7 @@ resource "aws_instance" "internal" {
   key_name = "Dank"
   vpc_security_group_ids = ["${aws_security_group.ssh.id}"]
 
-  dynamic "tag" {
-    for_each = local.ec2_tags
-
-    content {
-      key = tag.key
-      value = tag.value
-      propagate_at_launch = true
-    }
-  }
+  tags = local.ec2_tags
 }
 
 
@@ -45,15 +30,7 @@ resource "aws_instance" "internal" {
   key_name = "Dank"
   vpc_security_group_ids = ["${aws_security_group.ssh.id}"]
 
-  dynamic "tag" {
-    for_each = local.ec2_tags
-
-    content {
-      key                 = tag.key
-      value               = tag.value
-      propagate_at_launch = true
-    }
-  }
+ tags = local.ec2_tags
 }
 
 locals {
