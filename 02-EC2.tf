@@ -37,7 +37,6 @@ resource "aws_instance" "internal" {
   }
 }
 
-//dynamic blocks
 
 resource "aws_instance" "internal" {
   ami = "ami-95b53beb"
