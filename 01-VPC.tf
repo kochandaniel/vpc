@@ -12,6 +12,20 @@ resource "aws_internet_gateway" "gw" {
   }
 }
 
+## Create an Internet Gateway
+
+##resource "aws_internet_gateway" "terraform-igw"
+##{
+##vpc_id = "${aws_vpc.dank-test.id}"
+##}
+
+## Create NAT
+
+resource "aws_eip" "nat-eip" {
+  vpc = true
+}
+
+
 ### Subnets
 
 resource "aws_subnet" "external1" {
@@ -22,6 +36,11 @@ resource "aws_subnet" "external1" {
   tags = {
     Name = "External Subnet 1"
   }
+}
+
+resource "aws_route_table_association" "external1" {
+  subnet_id = "${aws_subnet.external1.id}"
+  route_table_id = "${aws_route_table.external.id}"
 }
 
 resource "aws_subnet" "external2" {
