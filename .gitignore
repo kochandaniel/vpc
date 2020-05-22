@@ -1,6 +1,0 @@
-.idea/*
-vars/*
-.terraform/*
-plan
-*.tfstate
-//
