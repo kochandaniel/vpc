@@ -20,7 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="993cede9-4874-4089-95a4-f4983a68f6a8" name="Default Changelist" comment="new files">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596714530367</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="new files">
+      <created>1596715129256</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1596715129256</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -201,10 +207,10 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="397" y="210" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1596710427344" />
-    <state x="496" y="311" key="Vcs.Push.Dialog.v2" timestamp="1596714533163">
+    <state x="496" y="311" key="Vcs.Push.Dialog.v2" timestamp="1596715131249">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
-    <state x="496" y="311" key="Vcs.Push.Dialog.v2/0.23.1792.1097@0.23.1792.1097" timestamp="1596714533163" />
+    <state x="496" y="311" key="Vcs.Push.Dialog.v2/0.23.1792.1097@0.23.1792.1097" timestamp="1596715131249" />
     <state x="684" y="492" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596710508937">
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
