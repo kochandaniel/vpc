@@ -1,4 +1,4 @@
-# action.yaml
+# action.yaml 2020
 name: 'Python Black Check'
 description: 'Customisable GitHub action to use black to check Python code in your repository'
 branding:
