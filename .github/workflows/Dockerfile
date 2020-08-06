@@ -1,6 +1,6 @@
 FROM python:3.8.1-alpine
 
-LABEL "maintainer" = "Daniel Kochan <kochandaniel@gmail.com>"
+LABEL "maintainer" = "Daniel Kochan <kochandaniells@gmail.com>"
 
 ADD requirements.txt /requirements.txt
 ADD entrypoint.sh /entrypoint.sh
