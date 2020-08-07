@@ -247,7 +247,28 @@
       <option name="project" value="LOCAL" />
       <updated>1596807060084</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="new files">
+      <created>1596807255013</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1596807255013</updated>
+    </task>
+    <task id="LOCAL-00023" summary="new files">
+      <created>1596807319697</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1596807319697</updated>
+    </task>
+    <task id="LOCAL-00024" summary="new files">
+      <created>1596807445579</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1596807445579</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -291,10 +312,10 @@
       <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="397" y="210" key="SettingsEditor/0.23.1792.1097@0.23.1792.1097" timestamp="1596710427344" />
-    <state x="496" y="294" key="Vcs.Push.Dialog.v2" timestamp="1596807065754">
+    <state x="496" y="294" key="Vcs.Push.Dialog.v2" timestamp="1596807447400">
       <screen x="0" y="0" width="1792" height="1120" />
     </state>
-    <state x="496" y="294" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1596807065754" />
+    <state x="496" y="294" key="Vcs.Push.Dialog.v2/0.0.1792.1120@0.0.1792.1120" timestamp="1596807447400" />
     <state x="496" y="311" key="Vcs.Push.Dialog.v2/0.23.1792.1097@0.23.1792.1097" timestamp="1596805589136" />
     <state x="684" y="479" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596806684742">
       <screen x="0" y="0" width="1792" height="1120" />
