@@ -11,4 +11,4 @@ mm = 11  # month
 # mm = int(input("Enter month: "))
 
 # display the calendar
-print(calendar.month(yy,00 mm))
+print(calendar.month(yy,mm))
