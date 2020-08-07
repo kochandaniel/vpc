@@ -1,6 +1,6 @@
 # Program to display calendar of the given month and year
 
-# importing calendar module
+# TESTING
 import calendar
 
 yy = 2014  # year

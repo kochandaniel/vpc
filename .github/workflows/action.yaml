@@ -1,4 +1,4 @@
-# action.yaml 2020
+# action.yaml
 name: 'Python Black Check'
 description: 'Customisable GitHub action to use black to check Python code in your repository'
 branding:
@@ -20,6 +20,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
+   args:
     - ${{ inputs.line-length }}
     - ${{ inputs.path }}
