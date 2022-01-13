@@ -123,7 +123,7 @@ resource "aws_security_group" "ssh" {
 } 
 
 
-## ACL
+## ACL 01
 
 resource "aws_network_acl" "default" {
   vpc_id = "${aws_vpc.dank-test.id}"
